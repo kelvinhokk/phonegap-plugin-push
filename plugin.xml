@@ -63,6 +63,8 @@
                     <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 </intent-filter>
             </service>
+            <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_icon_material" />
+            <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/push_icon" />
 		</config-file>
 
         <framework src="push.gradle" custom="true" type="gradleReference" />
@@ -77,6 +79,7 @@
 		<source-file src="src/android/com/adobe/phonegap/push/PushPlugin.java" target-dir="src/com/adobe/phonegap/push/" />
         <source-file src="src/android/com/adobe/phonegap/push/PermissionUtils.java" target-dir="src/com/adobe/phonegap/push/" />
         <source-file src="src/android/com/adobe/phonegap/push/BackgroundActionButtonHandler.java" target-dir="src/com/adobe/phonegap/push/" />
+        <source-file src="src/android/resources/res/values/colors.xml" target-dir="res/values"/>
 
 	</platform>
 
